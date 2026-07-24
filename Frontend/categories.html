@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h1>Category Management</h1>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="service.html">Services</a>
+    <a href="products.html">Products</a>
+    <a href="categories.html">Categories</a>
+    <a href="suppliers.html">Suppliers</a>
+    <a href="contact.html">Contact</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="login.html">Login</a>
+    <button onclick="logout()">Logout</button>
+</nav>
+
+<hr>
+
+<h2>Add Category</h2>
+
+<input
+type="text"
+id="name"
+placeholder="Category Name">
+
+<br><br>
+
+<input
+type="text"
+id="description"
+placeholder="Description">
+
+<br><br>
+
+<button onclick="addCategory()">
+Add Category
+</button>
+
+<hr>
+
+<h2>All Categories</h2>
+
+<table border="1" cellpadding="10">
+
+<thead>
+
+<tr>
+
+<th>Name</th>
+<th>Description</th>
+<th>Actions</th>
+
+</tr>
+
+</thead>
+
+<tbody id="categoryTable">
+
+</tbody>
+
+</table>
+
+<script src="js/categories.js"></script>
+
+</body>
+</html>

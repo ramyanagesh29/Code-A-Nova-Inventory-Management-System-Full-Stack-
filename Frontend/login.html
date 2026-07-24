@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="css/style.css">
+    <title>Inventory Management System - Login</title>
+</head>
+<body>
+    <h1>Login</h1>
+     <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="service.html">Services</a>
+    <a href="products.html">Products</a>
+    <a href="categories.html">Categories</a>
+    <a href="suppliers.html">Suppliers</a>
+    <a href="contact.html">Contact</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="login.html">Login</a>
+    <button onclick="logout()">Logout</button>
+</nav>
+    
+    <div class="login-box">
+    <form id="loginForm">
+
+        <p>Please login to access the Inventory Management Dashboard.</p>
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Enter Email"
+            required
+        >
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Enter Password"
+            required
+        >
+
+        <button type="submit">
+            Login
+        </button>
+
+        <a href="#">Forgot Password?</a>
+
+        <p>Don't have an account?</p>
+
+<a href="register.html">Register Here</a>
+
+    </form>
+</div>
+    <br>
+    <h2>Dashboard Features</h2>
+    <ul>
+    <li>Manage Products</li>
+<li>Track Inventory</li>
+<li>View Sales Records</li>
+<li>Monitor Purchases</li>
+<li>Generate Reports</li>
+</ul>
+
+<footer>
+    <p>© 2026 Inventory Management System</p>
+</footer>
+</body>
+<script src="js/login.js"></script>
+</html>
