@@ -170,29 +170,22 @@ Only authenticated users can access secured APIs.
 
 ---
 
-# 📷 Screenshots
+## 📷 Project Screenshots
 
-You can add screenshots here.
+### Home Page
+![Home](screenshots/home.png)
 
-Example:
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
 
-```
-screenshots/
+### Products
+![Products](screenshots/products.png)
 
-Home Page
+### Categories
+![Categories](screenshots/categories.png)
 
-Login Page
-
-Dashboard
-
-Products
-
-Categories
-
-Suppliers
-```
-
----
+### Suppliers
+![Suppliers](screenshots/suppliers.png)
 
 # 📌 API Endpoints
 
