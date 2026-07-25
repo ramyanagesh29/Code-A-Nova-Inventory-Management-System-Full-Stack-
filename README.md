@@ -4,7 +4,7 @@ A Full Stack Inventory Management System developed as part of the **Code-A-Nova 
 
 The application provides a simple and secure way to manage products, categories, suppliers, stock, sales, purchases, and inventory reports.
 
-
+---
 
 ## ✨ Features
 
@@ -53,7 +53,6 @@ The application provides a simple and secure way to manage products, categories,
 ## 📁 Project Structure
 
 ```
-
 Code-A-Nova-Inventory-Management-System-Full-Stack/
 │
 ├── Frontend/
@@ -118,8 +117,8 @@ Code-A-Nova-Inventory-Management-System-Full-Stack/
 │
 ├── .gitignore
 └── README.md
+````
 
-```
 ---
 
 ## 🔄 Inventory Workflow
@@ -158,36 +157,36 @@ Products with stock below **10 units** are counted as low-stock products and dis
 
 ### 1. Clone the Repository
 
-``bash
+```bash
 git clone https://github.com/ramyanagesh29/Code-A-Nova-Inventory-Management-System-Full-Stack-.git
-
+```
 
 Open the project folder:
 
-``bash
+```bash
 cd Code-A-Nova-Inventory-Management-System-Full-Stack-
-`
+```
 
- 2. Backend Setup
+### 2. Backend Setup
 
 Open the backend folder:
 
-``bash
+```bash
 cd "Inventory Backend"
-`
+```
 
 Install dependencies:
 
-``bash
+```bash
 npm install
-`
+```
 
 Create a `.env` file inside the `Inventory Backend` folder:
 
-``env
+```env
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
-`
+```
 
 > The `.env` file is excluded from the repository for security.
 
@@ -304,7 +303,6 @@ The Reports page provides:
 
 ![Inventory Reports](screenshots/reports.png)
 
-
 ---
 
 ## 📌 API Endpoints
@@ -373,7 +371,7 @@ Possible future improvements include:
 
 **Ramya N**
 
-GitHub: ramyanagesh29
+GitHub: [ramyanagesh29](https://github.com/ramyanagesh29)
 
 LinkedIn: https://www.linkedin.com/in/ramya-n2918/
 
@@ -388,3 +386,9 @@ This project was developed for educational purposes as part of the **Code-A-Nova
 
 
 
+
+
+
+That makes the README much stronger for an evaluator because the new functionality is immediately visible without running the application.
+
+Also, since your repository is public, make sure the old `.env` credentials have been rotated if they were previously committed. Deleting `.env` from the current repository view does **not** remove secrets from old Git history.
