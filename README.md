@@ -1,248 +1,389 @@
-# 📦 Code-A-Nova Inventory Management System (Full Stack)
+# 📦 Code-A-Nova Inventory Management System
 
-A Full Stack Inventory Management System developed as part of the **Code-A-Nova Full Stack Development Internship**. This application helps businesses manage products, categories, suppliers, and inventory efficiently with secure user authentication.
+A Full Stack Inventory Management System developed as part of the **Code-A-Nova Full Stack Development Internship**.
 
----
+The application provides a simple and secure way to manage products, categories, suppliers, stock, sales, purchases, and inventory reports.
 
-## 🚀 Features
 
-### 👤 User Authentication
-- User Registration
-- User Login
-- JWT Authentication
-- Password Encryption using bcrypt
-- Protected API Routes
 
-### 📦 Product Management
-- Add Product
-- View Products
-- Update Product Details
-- Delete Product
-- Search Products
-- Pagination Support
+## ✨ Features
 
-### 🗂️ Category Management
-- Add Category
-- View Categories
-- Edit Category
-- Delete Category
-
-### 🚚 Supplier Management
-- Add Supplier
-- View Suppliers
-- Update Supplier Details
-- Delete Supplier
-
-### 📊 Dashboard
-- Total Products
-- Total Categories
-- Total Suppliers
-- Inventory Summary
+- User Registration and Login
+- JWT-Based Authentication
+- Secure Password Hashing using bcrypt
+- Product Management (Add, View, Update, Delete)
+- Category Management
+- Supplier Management
+- Inventory Stock Tracking
+- Low Stock Monitoring
+- Sales Management
+- Automatic Stock Reduction after Sales
+- Prevention of Sales Exceeding Available Stock
+- Purchase Management
+- Automatic Stock Increase after Purchases
+- Sales History
+- Purchase History
+- Inventory Reports
+- Dashboard with Inventory Statistics
+- Responsive and User-Friendly Interface
 
 ---
 
-# 🛠️ Tech Stack
+## 🛠️ Tech Stack
 
-## Frontend
+### Frontend
 - HTML5
 - CSS3
 - JavaScript
 
-## Backend
+### Backend
 - Node.js
 - Express.js
 
-## Database
+### Database
 - MongoDB
 - Mongoose
 
-## Authentication
+### Authentication
 - JSON Web Token (JWT)
-- bcrypt.js
-
-## Version Control
-- Git
-- GitHub
+- bcrypt
 
 ---
 
-# 📁 Project Structure
+## 📁 Project Structure
 
-```
-Code-A-Nova-Inventory-Management-System-Full-Stack-
 
-│── Frontend/
+Code-A-Nova-Inventory-Management-System-Full-Stack/
+│
+├── Frontend/
 │   ├── css/
+│   │   └── style.css
+│   │
 │   ├── js/
-│   ├── images/
+│   │   ├── app.js
+│   │   ├── login.js
+│   │   ├── register.js
+│   │   ├── dashboard.js
+│   │   ├── products.js
+│   │   ├── categories.js
+│   │   ├── suppliers.js
+│   │   ├── sales.js
+│   │   ├── purchases.js
+│   │   └── reports.js
+│   │
 │   ├── index.html
+│   ├── about.html
+│   ├── service.html
+│   ├── contact.html
 │   ├── login.html
 │   ├── register.html
 │   ├── dashboard.html
 │   ├── products.html
 │   ├── categories.html
 │   ├── suppliers.html
-│   └── ...
-
-│── Inventory Backend/
+│   ├── sales.html
+│   ├── purchases.html
+│   └── reports.html
+│
+├── Inventory Backend/
 │   ├── controllers/
+│   │   └── authController.js
+│   │
 │   ├── middleware/
+│   │   └── authMiddleware.js
+│   │
 │   ├── models/
+│   │   ├── User.js
+│   │   ├── Product.js
+│   │   ├── Category.js
+│   │   ├── Supplier.js
+│   │   ├── Sale.js
+│   │   └── Purchase.js
+│   │
 │   ├── routes/
+│   │   ├── authRoutes.js
+│   │   ├── categoryRoutes.js
+│   │   ├── supplierRoutes.js
+│   │   ├── dashboardRoutes.js
+│   │   ├── saleRoutes.js
+│   │   ├── purchaseRoutes.js
+│   │   └── reportRoutes.js
+│   │
 │   ├── package.json
 │   ├── package-lock.json
-│   ├── .gitignore
 │   └── server.js
-
+│
+├── screenshots/
+│
+├── .gitignore
 └── README.md
-```
+
 
 ---
 
-# ⚙️ Installation
+## 🔄 Inventory Workflow
 
-## 1️⃣ Clone the Repository
+The system automatically manages inventory based on sales and purchases.
 
-```bash
+### Purchase
+
+When a purchase is recorded:
+
+1. Product and supplier are selected.
+2. Purchase quantity and price are entered.
+3. Total purchase amount is calculated.
+4. Purchase record is stored in MongoDB.
+5. Product stock automatically increases.
+
+### Sale
+
+When a sale is recorded:
+
+1. Product and quantity are selected.
+2. The system checks available stock.
+3. Total sales amount is calculated.
+4. Sale record is stored in MongoDB.
+5. Product stock automatically decreases.
+
+The system prevents sales when the requested quantity exceeds the available stock.
+
+### Low Stock Monitoring
+
+Products with stock below **10 units** are counted as low-stock products and displayed on the dashboard and reports.
+
+---
+
+## ⚙️ Installation
+
+### 1. Clone the Repository
+
+``bash
 git clone https://github.com/ramyanagesh29/Code-A-Nova-Inventory-Management-System-Full-Stack-.git
-```
 
----
 
-## 2️⃣ Backend Setup
+Open the project folder:
 
-```bash
+``bash
+cd Code-A-Nova-Inventory-Management-System-Full-Stack-
+`
+
+ 2. Backend Setup
+
+Open the backend folder:
+
+``bash
 cd "Inventory Backend"
+`
+
+Install dependencies:
+
+``bash
 npm install
-```
+`
 
-Create a **.env** file:
+Create a `.env` file inside the `Inventory Backend` folder:
 
-```
+``env
 MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
-PORT=5000
-```
+JWT_SECRET=your_jwt_secret
+`
 
-Run the backend:
+> The `.env` file is excluded from the repository for security.
 
-```bash
-npm start
-```
-
-or
-
-```bash
-npm run dev
-```
-
----
-
-## 3️⃣ Frontend Setup
-
-Open the **Frontend** folder.
-
-Run:
-
-```bash
-npm install
-```
-
-Start the frontend (if applicable):
+Start the backend:
 
 ```bash
 npm start
 ```
 
-Or simply open **index.html** in your browser if using static pages.
+Or:
+
+```bash
+node server.js
+```
+
+The backend runs at:
+
+```text
+http://localhost:3000
+```
+
+### 3. Frontend Setup
+
+Open the `Frontend` folder and run the HTML files using a local development server such as VS Code Live Server.
+
+Start with:
+
+```text
+index.html
+```
 
 ---
 
-# 🔐 Authentication
+## 🔐 Authentication
 
-The backend uses:
+The application uses:
 
-- JWT Authentication
-- Protected Routes
-- bcrypt Password Hashing
+* User Registration
+* User Login
+* JWT Authentication
+* bcrypt Password Hashing
+* Protected Backend Routes
 
-Only authenticated users can access secured APIs.
+After successful login, a JWT token is used to access protected APIs.
 
 ---
+
+## 📊 Dashboard
+
+The dashboard displays:
+
+* Total Products
+* Total Categories
+* Total Suppliers
+* Low Stock Products
+
+It also provides quick access to:
+
+* Products
+* Categories
+* Suppliers
+* Sales
+* Purchases
+* Reports
+
+---
+
+## 📈 Reports
+
+The Reports page provides:
+
+* Total Products
+* Total Categories
+* Total Suppliers
+* Low Stock Products
+* Total Sales Amount
+* Total Purchase Amount
+* Total Sales Transactions
+* Total Purchase Transactions
+
+---
+
 ## 📷 Project Screenshots
 
 ### Home Page
-![Home](screenshots/home.png)
+
+![Home Page](screenshots/home.png)
 
 ### Dashboard
+
 ![Dashboard](screenshots/dashboard.png)
 
 ### Products
+
 ![Products](screenshots/products.png)
 
 ### Categories
+
 ![Categories](screenshots/categories.png)
 
 ### Suppliers
+
 ![Suppliers](screenshots/suppliers.png)
 
+### Sales Management
 
+![Sales Management](screenshots/sales.png)
 
-# 📌 API Endpoints
+### Purchase Management
 
-## Authentication
+![Purchase Management](screenshots/purchases.png)
 
-- POST `/api/auth/register`
-- POST `/api/auth/login`
+### Inventory Reports
 
-## Products
+![Inventory Reports](screenshots/reports.png)
 
-- GET `/products`
-- POST `/products`
-- PUT `/products/:id`
-- DELETE `/products/:id`
-
-## Categories
-
-- GET `/api/categories`
-- POST `/api/categories`
-- PUT `/api/categories/:id`
-- DELETE `/api/categories/:id`
-
-## Suppliers
-
-- GET `/api/suppliers`
-- POST `/api/suppliers`
-- PUT `/api/suppliers/:id`
-- DELETE `/api/suppliers/:id`
-
-## Dashboard
-
-- GET `/api/dashboard`
 
 ---
 
-# ✨ Future Enhancements
+## 📌 API Endpoints
 
-- Product Image Upload
-- Inventory Reports
-- Sales Module
-- Purchase Orders
-- Export to Excel/PDF
-- Email Notifications
-- Role-Based Access Control (Admin/User)
+### Authentication
+
+* `POST /api/auth/register`
+* `POST /api/auth/login`
+
+### Products
+
+* `GET /products`
+* `POST /products`
+* `PUT /products/:id`
+* `DELETE /products/:id`
+
+### Categories
+
+* `GET /api/categories`
+* `POST /api/categories`
+* `PUT /api/categories/:id`
+* `DELETE /api/categories/:id`
+
+### Suppliers
+
+* `GET /api/suppliers`
+* `POST /api/suppliers`
+* `PUT /api/suppliers/:id`
+* `DELETE /api/suppliers/:id`
+
+### Dashboard
+
+* `GET /api/dashboard`
+
+### Sales
+
+* `GET /api/sales`
+* `POST /api/sales`
+
+### Purchases
+
+* `GET /api/purchases`
+* `POST /api/purchases`
+
+### Reports
+
+* `GET /api/reports`
 
 ---
 
-# 👩‍💻 Author
+## 🔮 Future Enhancements
+
+Possible future improvements include:
+
+* Product Image Upload
+* Role-Based Access Control (Admin/User)
+* Export Reports to Excel/PDF
+* Email Notifications for Low Stock
+* Advanced Search and Filtering
+* Sales and Purchase Charts
+* Date-Based Report Filtering
+
+---
+
+## 👩‍💻 Author
 
 **Ramya N**
 
-- GitHub: https://github.com/ramyanagesh29
-- LinkedIn: *(Add your LinkedIn profile link here)*
+GitHub: ramyanagesh29
+
+LinkedIn: https://www.linkedin.com/in/ramya-n2918/
 
 ---
 
-# 📄 License
+## 📄 License
 
-This project was developed for learning purposes as part of the **Code-A-Nova Full Stack Development Internship**.
+This project was developed for educational purposes as part of the **Code-A-Nova Full Stack Development Internship**.
+
+
+
+
+
+
