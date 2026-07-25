@@ -52,6 +52,7 @@ The application provides a simple and secure way to manage products, categories,
 
 ## 📁 Project Structure
 
+```
 
 Code-A-Nova-Inventory-Management-System-Full-Stack/
 │
@@ -118,7 +119,7 @@ Code-A-Nova-Inventory-Management-System-Full-Stack/
 ├── .gitignore
 └── README.md
 
-
+```
 ---
 
 ## 🔄 Inventory Workflow
