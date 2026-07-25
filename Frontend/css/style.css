@@ -409,3 +409,89 @@ tr:hover{
     }
 
 }
+
+/* =========================
+   REPORTS / DASHBOARD CARDS
+   ========================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.card {
+    background: white;
+    padding: 25px 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+    /* Prevent large numbers from leaving card */
+    min-width: 0;
+    overflow: hidden;
+}
+
+.card h3 {
+    margin: 0 0 15px;
+    font-size: 18px;
+    color: #374151;
+}
+
+/* Dashboard/report numbers */
+.card h1 {
+    background: none;
+    padding: 0;
+    margin: 0;
+
+    color: #2563eb;
+    font-size: 30px;
+    font-weight: 700;
+
+    /* Handle very large values */
+    width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+/* Make money values slightly smaller */
+#totalSalesAmount,
+#totalPurchaseAmount {
+    font-size: 24px;
+}
+
+/* Low stock number */
+#lowStock,
+#lowStockProducts {
+    color: #dc2626;
+}
+
+/* Sales values */
+#totalSalesAmount,
+#totalSalesTransactions {
+    color: #16a34a;
+}
+
+/* Purchase values */
+#totalPurchaseAmount,
+#totalPurchaseTransactions {
+    color: #7c3aed;
+}
+
+@media (max-width: 600px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card h1 {
+        font-size: 26px;
+    }
+
+    #totalSalesAmount,
+    #totalPurchaseAmount {
+        font-size: 21px;
+    }
+}

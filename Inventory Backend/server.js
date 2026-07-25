@@ -10,6 +10,9 @@ const supplierRoutes = require("./routes/supplierRoutes");
 const dashboardRoutes = require("./routes/dashboardRoutes");
 const bcrypt = require("bcrypt");
 const User = require("./models/User");
+const saleRoutes = require("./routes/saleRoutes");
+const purchaseRoutes = require("./routes/purchaseRoutes");
+const reportRoutes = require("./routes/reportRoutes");
 
 const app = express();
 app.use(cors());
@@ -17,7 +20,9 @@ app.use(express.json());
 app.use("/api/categories", categoryRoutes);
 app.use("/api/suppliers", supplierRoutes);
 app.use("/api/dashboard", dashboardRoutes);
-
+app.use("/api/sales", saleRoutes);
+app.use("/api/purchases", purchaseRoutes);
+app.use("/api/reports", reportRoutes);
 
 app.get("/products", async (req, res) => {
     try {

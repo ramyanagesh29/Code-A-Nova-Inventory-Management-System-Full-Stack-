@@ -3,76 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+
+    <title>Inventory Reports</title>
+
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
 <header class="header">
+
     <h1>Inventory Management System</h1>
 
     <nav>
         <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
         <a href="products.html">Products</a>
         <a href="categories.html">Categories</a>
         <a href="suppliers.html">Suppliers</a>
-        <a href="contact.html">Contact</a>
         <a href="sales.html">Sales</a>
         <a href="purchases.html">Purchases</a>
         <a href="reports.html">Reports</a>
 
         <button onclick="logout()">Logout</button>
     </nav>
+
 </header>
+
 
 <div class="dashboard-container">
 
-    <h2>Dashboard</h2>
+    <h2>Inventory Reports</h2>
 
     <div class="cards">
 
         <div class="card">
-            <h3>📦 Products</h3>
+            <h3>📦 Total Products</h3>
             <h1 id="totalProducts">0</h1>
         </div>
 
         <div class="card">
-            <h3>📂 Categories</h3>
+            <h3>📂 Total Categories</h3>
             <h1 id="totalCategories">0</h1>
         </div>
 
         <div class="card">
-            <h3>🚚 Suppliers</h3>
+            <h3>🚚 Total Suppliers</h3>
             <h1 id="totalSuppliers">0</h1>
         </div>
 
         <div class="card">
-            <h3>⚠ Low Stock</h3>
-            <h1 id="lowStock">0</h1>
+            <h3>⚠️ Low Stock</h3>
+            <h1 id="lowStockProducts">0</h1>
         </div>
 
-    </div>
+        <div class="card">
+            <h3>💰 Sales Amount</h3>
+            <h1 id="totalSalesAmount">₹0.00</h1>
+        </div>
 
-    <div class="quick-links">
+        <div class="card">
+            <h3>🛒 Purchase Amount</h3>
+            <h1 id="totalPurchaseAmount">₹0.00</h1>
+        </div>
 
-        <a href="products.html" class="btn">Manage Products</a>
+        <div class="card">
+            <h3>📈 Sales Transactions</h3>
+            <h1 id="totalSalesTransactions">0</h1>
+        </div>
 
-        <a href="categories.html" class="btn">Manage Categories</a>
-
-        <a href="suppliers.html" class="btn">Manage Suppliers</a>
-
-        <a href="sales.html" class="btn">Manage Sales</a>
-
-        <a href="purchases.html" class="btn">Manage Purchases</a>
-
-        <a href="reports.html" class="btn">View Reports</a>
+        <div class="card">
+            <h3>📋 Purchase Transactions</h3>
+            <h1 id="totalPurchaseTransactions">0</h1>
+        </div>
 
     </div>
 
 </div>
 
-<script src="js/dashboard.js"></script>
 
+<script src="js/reports.js"></script>
 
 </body>
 </html>

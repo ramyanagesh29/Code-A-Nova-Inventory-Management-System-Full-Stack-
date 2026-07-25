@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Management</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <h1>Inventory Management System</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="products.html">Products</a>
+        <a href="categories.html">Categories</a>
+        <a href="suppliers.html">Suppliers</a>
+        <a href="sales.html">Sales</a>
+
+        <button onclick="logout()">Logout</button>
+    </nav>
+
+</header>
+
+<div class="management-container">
+
+    <h2>Sales Management</h2>
+
+    <div class="form-box">
+
+        <h3>Record New Sale</h3>
+
+        <form id="saleForm">
+
+            <select id="product" required>
+                <option value="">Select Product</option>
+            </select>
+
+            <input
+                type="number"
+                id="quantity"
+                placeholder="Quantity Sold"
+                min="1"
+                required
+            >
+
+            <button type="submit">
+                Record Sale
+            </button>
+
+        </form>
+
+    </div>
+
+    <h2>Sales Records</h2>
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Total Amount</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+
+            <tbody id="salesTable">
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="js/sales.js"></script>
+
+</body>
+</html>
