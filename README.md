@@ -383,12 +383,3 @@ This project was developed for educational purposes as part of the **Code-A-Nova
 
 
 
-
-
-
-
-
-
-That makes the README much stronger for an evaluator because the new functionality is immediately visible without running the application.
-
-Also, since your repository is public, make sure the old `.env` credentials have been rotated if they were previously committed. Deleting `.env` from the current repository view does **not** remove secrets from old Git history.
